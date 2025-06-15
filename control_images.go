@@ -27,7 +27,7 @@ func main() {
 			".gif":  true,
 		}
 		if !allowed[ext] {
-			return c.Render("home", fiber.Map{"message": "extension your image is not accepted restart with .png .jpeg .jpg .gif"})
+			return c.Render("home", fiber.Map{"message": "extension your image is not accepted reuse with this ext .png .jpeg .jpg .gif"})
 		}
 		if image.Size > 1<<20 { // 1<<20 = 1mb or 2<<20 = 2mb / like this
 			return c.Render("home", fiber.Map{"message": "Large image size, only less than 1MB required."})
